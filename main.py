@@ -38,10 +38,10 @@ class Widget(QMainWindow):
 class SecondWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('renew.ui', self)
+        uic.loadUi('addEditCoffeeForm.ui', self)
         self.con = sqlite3.connect('coffee.db')
         self.cur = self.con.cursor()
-        self.label_8.setText('для удаления введите только id/для добавления все, кроме id')
+        self.label_8.setText('для удаления введите только id/для добавления все, роме id')
         self.pushButton.clicked.connect(self.delete)
         self.pushButton_2.clicked.connect(self.add)
 
